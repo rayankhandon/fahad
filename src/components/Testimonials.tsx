@@ -9,6 +9,7 @@ interface TestimonialsProps {
 
 export const Testimonials: React.FC<TestimonialsProps> = ({ name }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const displayName = name || 'Salar S';
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? TESTIMONIALS_DATA.length - 1 : prev - 1));
@@ -20,9 +21,8 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ name }) => {
 
   const activeTestimonial = TESTIMONIALS_DATA[currentIndex];
 
-  // Helper to replace [YOUR NAME] in quote dynamically if present
   const getFormattedQuote = (quote: string) => {
-    return quote.replace('[YOUR NAME]', name && name !== '[YOUR NAME]' ? name : 'Fahad');
+    return quote.replace('Fahad', displayName).replace('Julian Vance', displayName).replace('Julian', displayName);
   };
 
   return (
@@ -32,7 +32,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ name }) => {
         {/* Section Header */}
         <ScrollReveal variant="fade-up">
           <div className="section-header">
-            <div className="section-eyebrow">
+            <div className="section-eyebrow" style={{ background: '#FFEDD5', color: '#EA580C', borderColor: '#FED7AA' }}>
               <MessageSquareQuote size={14} />
               <span>CLIENT REVIEWS</span>
             </div>
@@ -51,31 +51,32 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ name }) => {
               <ChevronLeft size={24} />
             </button>
 
-            <div className="testimonial-card">
+            <div className="testimonial-card" style={{ border: '1px solid #E2E8F0', borderTop: '4px solid #7C3AED', borderRadius: '20px', padding: '2.5rem' }}>
               {/* Star Rating */}
-              <div className="testimonial-stars">
+              <div className="testimonial-stars" style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.25rem' }}>
                 {[...Array(activeTestimonial.rating)].map((_, i) => (
-                  <Star key={i} size={20} fill="#F59E0B" color="#F59E0B" />
+                  <Star key={i} size={20} fill="#FACC15" color="#FACC15" />
                 ))}
               </div>
 
               {/* Testimonial Quote */}
-              <p className="testimonial-quote">
+              <p className="testimonial-quote" style={{ fontSize: '1.15rem', color: '#1E293B', lineHeight: 1.7, fontStyle: 'italic', marginBottom: '2rem' }}>
                 "{getFormattedQuote(activeTestimonial.quote)}"
               </p>
 
               {/* Client Profile Info */}
-              <div className="testimonial-author">
+              <div className="testimonial-author" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <img
                   src={activeTestimonial.avatar}
                   alt={activeTestimonial.name}
                   className="author-avatar"
                   loading="lazy"
+                  style={{ width: '56px', height: '56px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #7C3AED' }}
                 />
                 <div className="author-details">
-                  <h4 className="author-name">{activeTestimonial.name}</h4>
-                  <p className="author-role">{activeTestimonial.title} • {activeTestimonial.company}</p>
-                  <span className="author-industry">{activeTestimonial.industry}</span>
+                  <h4 className="author-name" style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A' }}>{activeTestimonial.name}</h4>
+                  <p className="author-role" style={{ fontSize: '0.875rem', color: '#64748B', margin: '0.1rem 0' }}>{activeTestimonial.title} • {activeTestimonial.company}</p>
+                  <span className="author-industry" style={{ fontSize: '0.75rem', fontWeight: 700, color: '#7C3AED', textTransform: 'uppercase' }}>{activeTestimonial.industry}</span>
                 </div>
               </div>
             </div>
@@ -97,10 +98,10 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ name }) => {
                 width: idx === currentIndex ? '28px' : '10px',
                 height: '10px',
                 borderRadius: '5px',
-                backgroundColor: idx === currentIndex ? '#2563EB' : '#CBD5E1',
+                backgroundColor: idx === currentIndex ? '#7C3AED' : '#CBD5E1',
                 border: 'none',
                 cursor: 'pointer',
-                transition: 'all 0.3s ease'
+                transition: 'all 0.25s ease'
               }}
               aria-label={`Go to slide ${idx + 1}`}
             />

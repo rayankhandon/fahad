@@ -18,7 +18,7 @@ import { Footer } from './components/Footer';
 import { ResumeDownloadModal } from './components/ResumeDownloadModal';
 
 export function App() {
-  const [writerName] = useState<string>('FAHAD');
+  const [writerName] = useState<string>('SALAR S');
   const [downloadModalOpen, setDownloadModalOpen] = useState<boolean>(false);
   const [contactServicePreFill, setContactServicePreFill] = useState<string>('');
 

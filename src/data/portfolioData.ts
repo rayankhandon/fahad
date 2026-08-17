@@ -6,6 +6,7 @@ export interface ServiceItem {
   iconName: string;
   deliverables: string[];
   turnaround: string;
+  colorTheme: 'blue' | 'purple' | 'cyan' | 'orange' | 'teal' | 'violet';
 }
 
 export interface PortfolioProject {
@@ -58,7 +59,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     fullDesc: 'A complete overhaul of your professional resume. We transform your work history into a compelling, quantified marketing document optimized for both applicant tracking software (ATS) and human recruiters.',
     iconName: 'FileText',
     deliverables: ['Custom ATS-Engineered Resume (PDF + Editable Word)', 'Targeted Keyword Optimization', 'Quantified Achievement Bullet Points', '2 Rounds of Revisions'],
-    turnaround: '3 - 5 Business Days'
+    turnaround: '3 - 5 Business Days',
+    colorTheme: 'blue'
   },
   {
     id: 'executive-resume',
@@ -67,7 +69,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     fullDesc: 'Tailored specifically for C-suite, VP, and Director-level candidates. Focuses on P&L responsibility, strategic vision, team leadership, revenue growth, and organizational transformation.',
     iconName: 'Award',
     deliverables: ['Executive Board-Ready Resume', 'Executive Value Proposition Brief', 'ATS + Modern Visual Design', 'Priority 1-on-1 Strategy Session'],
-    turnaround: '4 - 6 Business Days'
+    turnaround: '4 - 6 Business Days',
+    colorTheme: 'purple'
   },
   {
     id: 'linkedin-optimization',
@@ -76,7 +79,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     fullDesc: 'Reposition your digital presence. We rewrite your headline, summary, work experience, and skills matrix to maximize recruiter search appearance and build instant authority.',
     iconName: 'Linkedin',
     deliverables: ['Search-Optimized Headline & About Section', 'Complete Experience Section Rewrite', 'Skills Tagging & Recommendations Strategy', 'Custom Banner Image Concept'],
-    turnaround: '2 - 3 Business Days'
+    turnaround: '2 - 3 Business Days',
+    colorTheme: 'cyan'
   },
   {
     id: 'cover-letter',
@@ -85,7 +89,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     fullDesc: 'Stop sending generic cover letters. We craft a modular, high-impact cover letter template that grabs hiring managers’ attention in the first paragraph and highlights key achievements.',
     iconName: 'Mail',
     deliverables: ['Tailored Master Cover Letter', 'Fillable Job-Specific Customization Tokens', 'Matching Visual Styling', 'Editable Word Format'],
-    turnaround: '2 Business Days'
+    turnaround: '2 Business Days',
+    colorTheme: 'orange'
   },
   {
     id: 'career-change',
@@ -94,7 +99,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     fullDesc: 'Switching industries or roles? We reframe your background around universal, high-value transferable skills (project management, leadership, analytical problem solving) to bridge the gap.',
     iconName: 'RefreshCw',
     deliverables: ['Transferable Skills Alignment Audit', 'Reframed Functional/Hybrid Layout', 'Transition Story Alignment Brief', '2 Rounds of Edits'],
-    turnaround: '4 - 5 Business Days'
+    turnaround: '4 - 5 Business Days',
+    colorTheme: 'teal'
   },
   {
     id: 'cv-writing',
@@ -103,7 +109,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     fullDesc: 'Designed for academic, research, medical, and international roles requiring comprehensive multi-page CVs highlighting publications, grants, certifications, and teaching credentials.',
     iconName: 'GraduationCap',
     deliverables: ['Multi-Page Academic/International CV', 'Publications & Grants Formatting', 'Credential & Honor Roll Matrix', 'PDF + Word Files'],
-    turnaround: '4 - 6 Business Days'
+    turnaround: '4 - 6 Business Days',
+    colorTheme: 'violet'
   }
 ];
 
@@ -231,7 +238,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     title: 'VP of Technology',
     company: 'Fintech Solutions Inc.',
     industry: 'Financial Technology',
-    quote: 'Before working with Fahad, my resume wasn’t getting much attention despite 12 years in tech leadership. His total overhaul highlighted my strategic impact. I landed 4 senior interviews within 2 weeks!',
+    quote: 'Before working with Salar S, my resume wasn’t getting much attention despite 12 years in tech leadership. His total overhaul highlighted my strategic impact. I landed 4 senior interviews within 2 weeks!',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'
   },
@@ -241,7 +248,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     title: 'Director of Global Marketing',
     company: 'Nexus Global Brands',
     industry: 'Marketing & Retail',
-    quote: 'Fahad turned my messy 3-page draft into a sharp, executive-ready document. His strategic wording and LinkedIn optimization led directly to recruiters reaching out to me first. Worth every single penny.',
+    quote: 'Salar S turned my messy 3-page draft into a sharp, executive-ready document. His strategic wording and LinkedIn optimization led directly to recruiters reaching out to me first. Worth every single penny.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80'
   },
@@ -251,7 +258,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     title: 'Senior Operations Manager',
     company: 'Logistics Global',
     industry: 'Supply Chain',
-    quote: 'I was transitioning from military leadership to corporate operations and struggled to translate my experience. Fahad bridged the gap brilliantly. My ATS score jumped from 48% to 96%!',
+    quote: 'I was transitioning from military leadership to corporate operations and struggled to translate my experience. Salar S bridged the gap brilliantly. My ATS score jumped from 48% to 96%!',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80'
   },
@@ -261,7 +268,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     title: 'Healthcare Executive',
     company: 'Regional Health Network',
     industry: 'Healthcare Administration',
-    quote: 'The executive package with Fahad was a game-changer. The cover letter and personal branding strategy gave me the confidence to apply for C-suite roles I used to hesitate on.',
+    quote: 'The executive package with Salar S was a game-changer. The cover letter and personal branding strategy gave me the confidence to apply for C-suite roles I used to hesitate on.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80'
   }
@@ -294,8 +301,7 @@ export const PRICING_DATA: PricingPackage[] = [
       'Cover Letter',
       'ATS Optimization',
       'LinkedIn Guidance',
-      '2 Revisions',
-      'PDF + Editable File'
+      '2 Revisions'
     ]
   },
   {

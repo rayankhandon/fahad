@@ -12,6 +12,8 @@ export const Navbar: React.FC<NavbarProps> = ({ name, onOpenDownloadModal }) => 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
+  const displayName = name || 'SALAR S';
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 30) {
@@ -40,15 +42,6 @@ export const Navbar: React.FC<NavbarProps> = ({ name, onOpenDownloadModal }) => 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const getMonogram = (fullName: string) => {
-    if (!fullName || fullName === '[YOUR NAME]') return 'F';
-    const parts = fullName.trim().split(' ');
-    if (parts.length >= 2 && parts[0] !== 'FAHAD') {
-      return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
-    }
-    return 'F';
-  };
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -81,10 +74,12 @@ export const Navbar: React.FC<NavbarProps> = ({ name, onOpenDownloadModal }) => 
       <div className="container navbar-container">
         {/* Brand Logo & Name */}
         <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="logo-brand">
-          <div className="logo-monogram">{getMonogram(name)}</div>
+          <div className="logo-monogram" style={{ background: 'linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)', color: '#FFFFFF', fontWeight: 900 }}>
+            SS
+          </div>
           <div className="logo-text">
-            <span className="logo-name">{name}</span>
-            <span className="logo-tagline">Resume Specialist</span>
+            <span className="logo-name">{displayName}</span>
+            <span className="logo-tagline" style={{ letterSpacing: '0.05em', color: '#2563EB', fontWeight: 800 }}>RESUME SPECIALIST</span>
           </div>
         </a>
 
@@ -121,6 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({ name, onOpenDownloadModal }) => 
             href="#contact"
             onClick={(e) => handleNavClick(e, '#contact')}
             className="btn btn-primary btn-sm"
+            style={{ background: 'linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)', border: 'none' }}
           >
             <Send size={16} />
             <span>Hire Me</span>
@@ -162,17 +158,17 @@ export const Navbar: React.FC<NavbarProps> = ({ name, onOpenDownloadModal }) => 
             style={{ width: '100%' }}
           >
             <Download size={18} />
-            <span>Download Sample Resume</span>
+            <span>Download Resume</span>
           </button>
 
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, '#contact')}
             className="btn btn-primary"
-            style={{ width: '100%' }}
+            style={{ width: '100%', background: 'linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)', border: 'none' }}
           >
             <Send size={18} />
-            <span>Hire Me Now</span>
+            <span>Hire Me</span>
           </a>
         </div>
       </div>

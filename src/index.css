@@ -11,6 +11,17 @@
   --color-accent-hover: #1D4ED8;
   --color-accent-light: #EFF6FF;
   --color-accent-border: #BFDBFE;
+  
+  /* Multi-Color Palette Tokens */
+  --color-electric-blue: #2563EB;
+  --color-bright-blue: #3B82F6;
+  --color-purple: #7C3AED;
+  --color-violet: #8B5CF6;
+  --color-cyan: #06B6D4;
+  --color-teal: #14B8A6;
+  --color-orange: #F97316;
+  --color-yellow: #FACC15;
+  
   --color-bg: #F8FAFC;
   --color-card-bg: #FFFFFF;
   --color-white: #FFFFFF;
@@ -31,6 +42,9 @@
   --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
   --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
   --shadow-accent: 0 10px 25px -5px rgba(37, 99, 235, 0.25);
+  --shadow-purple: 0 10px 25px -5px rgba(124, 58, 237, 0.25);
+  --shadow-cyan: 0 10px 25px -5px rgba(6, 182, 212, 0.25);
+  --shadow-orange: 0 10px 25px -5px rgba(249, 115, 22, 0.25);
   
   --radius-sm: 6px;
   --radius-md: 10px;

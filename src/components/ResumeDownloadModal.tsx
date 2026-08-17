@@ -7,12 +7,12 @@ interface ResumeDownloadModalProps {
 }
 
 export const ResumeDownloadModal: React.FC<ResumeDownloadModalProps> = ({ name, onClose }) => {
-  const actualName = name && name !== '[YOUR NAME]' ? name : 'FAHAD';
+  const actualName = name && name !== '[YOUR NAME]' ? name : 'SALAR S';
 
   const handleDownload = () => {
     const content = `================================================================================
 ${actualName.toUpperCase()} | RESUME SPECIALIST
-New York, NY • fahad.resumespecialist@gmail.com • linkedin.com/in/fahad-resumespecialist
+New York, NY • salar.resumespecialist@gmail.com • linkedin.com/in/salar-resumespecialist
 ================================================================================
 
 EXECUTIVE SUMMARY
@@ -80,7 +80,7 @@ Industries: Tech (SaaS), Investment Banking, Global Logistics, Healthcare, Retai
         <div className="modal-header" style={{ background: '#F8FAFC' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
-              <div className="section-eyebrow" style={{ marginBottom: '0.4rem' }}>
+              <div className="section-eyebrow" style={{ marginBottom: '0.4rem', background: '#EFF6FF', color: '#2563EB' }}>
                 <Sparkles size={14} />
                 <span>SAMPLE ATS RESUME PREVIEW</span>
               </div>
@@ -93,7 +93,7 @@ Industries: Tech (SaaS), Investment Banking, Global Logistics, Healthcare, Retai
                 <span>Print</span>
               </button>
 
-              <button className="btn btn-primary btn-sm" onClick={handleDownload}>
+              <button className="btn btn-primary btn-sm" onClick={handleDownload} style={{ background: 'linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)', border: 'none' }}>
                 <Download size={16} />
                 <span>Download Document</span>
               </button>
@@ -114,7 +114,7 @@ Industries: Tech (SaaS), Investment Banking, Global Logistics, Healthcare, Retai
                 RESUME SPECIALIST
               </p>
               <p style={{ fontSize: '0.825rem', color: '#64748B', fontFamily: 'Inter, sans-serif', marginTop: '0.2rem' }}>
-                New York, NY • fahad.resumespecialist@gmail.com • linkedin.com/in/fahad-resumespecialist
+                New York, NY • salar.resumespecialist@gmail.com • linkedin.com/in/salar-resumespecialist
               </p>
             </div>
 
@@ -157,7 +157,7 @@ Industries: Tech (SaaS), Investment Banking, Global Logistics, Healthcare, Retai
               <CheckCircle2 size={16} color="#10B981" /> 100% Verified ATS-Friendly Template
             </span>
 
-            <button className="btn btn-primary" onClick={handleDownload}>
+            <button className="btn btn-primary" onClick={handleDownload} style={{ background: 'linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)', border: 'none' }}>
               <Download size={16} />
               <span>Download Full Sample (.TXT / PDF)</span>
             </button>
